@@ -13,8 +13,7 @@
         "--flavor",
         "simpson_variant",
         "--target",
-        "lib/main_simpson_variant.dart",
-        "BUILD=simpson"
+        "lib/main_simpson_variant.dart"
       ]
     },
     {

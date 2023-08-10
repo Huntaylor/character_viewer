@@ -17,5 +17,25 @@
     "@aboutText": {
         "description": "Text for details within the details page"
         
+    },
+    "appLaunchHeadline": "Welcome.",
+    "@appLaunchHeadline": {
+        "description": "Text for App launch headline"
+        
+    },
+    "appLaunchButton": "Get Started",
+    "@appLaunchButton": {
+        "description": "Text for App launch button"
+        
+    },
+    "appLaunchTitle": "Character Viewer",
+    "@appLaunchTitle": {
+        "description": "Text for App launch title"
+        
+    },
+    "appLaunchAnimationCursor": "|",
+    "@appLaunchAnimationCursor": {
+        "description": "Text for App launch animation cursor"
+        
     }
 }
