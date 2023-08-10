@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Simpson Variant",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_simpson_variant.dart",
+      "args": [
+        "--flavor",
+        "simpson_variant",
+        "--target",
+        "lib/main_simpson_variant.dart",
+        "BUILD=simpson"
+      ]
+    },
+    {
+      "name": "Launch Wire Variant",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_wire_variant.dart",
+      "args": ["--flavor", "wire_variant", "--target", "lib/main_wire_variant.dart"]
+    },
+    {
+      "name": "Launch production",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_production.dart",
+      "args": ["--flavor", "production", "--target", "lib/main_production.dart"]
+    }
+  ]
+}

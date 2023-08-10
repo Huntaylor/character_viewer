@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="wire_variant" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="buildFlavor" value="wire_variant" />
+    <option name="filePath" value="$PROJECT_DIR$/lib/main_wire_variant.dart" />
+    <method v="2" />
+  </configuration>
+</component>

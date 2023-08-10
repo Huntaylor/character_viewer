@@ -1,0 +1,21 @@
+{
+    "@@locale": "en",
+    "appTitle": "{title} Characters",
+    "@appTitle": {
+        "description": "Text shown in the AppBar of the Home Page",
+         "placeholders": {
+            "title": {
+            }
+        }
+    },
+    "searchText": "Search",
+    "@searchText": {
+        "description": "Hint text for Search bar"
+        
+    },
+    "aboutText": "About",
+    "@aboutText": {
+        "description": "Text for details within the details page"
+        
+    }
+}

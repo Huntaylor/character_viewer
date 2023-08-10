@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="simpson_variant" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="buildFlavor" value="simpson_variant" />
+    <option name="filePath" value="$PROJECT_DIR$/lib/main_simpson_variant.dart" />
+    <method v="2" />
+  </configuration>
+</component>
