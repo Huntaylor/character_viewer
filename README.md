@@ -21,10 +21,10 @@ To run the desired flavor either use the launch configuration in VSCode/Android 
 
 ```sh
 # Simpson Variant
-$ flutter run --flavor simpson_variant --target lib/main_simpson_variant.dart
+$ flutter run --flavor development --target lib/main_development.dart
 
 # Wire Variant
-$ flutter run --flavor wire_variant --target lib/main_wire_variant.dart
+$ flutter run --flavor staging --target lib/main_staging.dart
 
 ```
 

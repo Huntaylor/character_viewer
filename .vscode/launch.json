@@ -11,7 +11,7 @@
       "program": "lib/main_simpson_variant.dart",
       "args": [
         "--flavor",
-        "simpson_variant",
+        "development",
         "--target",
         "lib/main_simpson_variant.dart"
       ]
@@ -21,7 +21,7 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main_wire_variant.dart",
-      "args": ["--flavor", "wire_variant", "--target", "lib/main_wire_variant.dart"]
+      "args": ["--flavor", "staging", "--target", "lib/main_wire_variant.dart"]
     }
   ]
 }

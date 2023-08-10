@@ -80,13 +80,13 @@ android {
 
     flavorDimensions "default"
     productFlavors { 
-        wire_variant {
+        staging {
             dimension "default"
             applicationIdSuffix ".dev"
             manifestPlaceholders = [appName: "[DEV] Wire Viewer"]
             applicationId = "com.sample.wireviewer"
         }
-        simpson_variant {
+        development {
             dimension "default"
             applicationIdSuffix ".dev"
             manifestPlaceholders = [appName: "[DEV] Simpson Viewer"]
