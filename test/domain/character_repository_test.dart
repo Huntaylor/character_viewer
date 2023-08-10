@@ -49,7 +49,7 @@ void main() {
 
     test('getAll throws an exception on failure', () async {
       testClient = MockClient((request) async {
-        throw Exception('Mocked error');
+        throw Exception('Failed to load data');
       });
 
       characterRepository = CharacterRepository();

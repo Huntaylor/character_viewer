@@ -2,6 +2,7 @@
 
 import 'package:autoequal/autoequal.dart';
 import 'package:equatable/equatable.dart';
+import 'package:simpson_viewer/utils/app_library.dart';
 
 part 'character_details_model.g.dart';
 
@@ -18,6 +19,7 @@ class CharacterDetails extends Equatable {
   final String description;
 
   @override
+  @protected
   List<Object?> get props => _$props;
 
   Map<String, dynamic> toJson() {
