@@ -40,25 +40,23 @@ class CharacterDetailCard extends StatelessWidget {
   final CharacterDetails details;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(8),
-        child: Column(
-          children: [
-            Text(
-              details.title,
-              style: context.textTheme.titleMedium,
-            ),
-            Divider(
-              color: context.colorScheme.onPrimaryContainer,
-            ),
-            Text(
-              details.description,
-              softWrap: true,
-              style: context.textTheme.bodyMedium,
-            ),
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.all(8),
+      child: Column(
+        children: [
+          Text(
+            details.title,
+            style: context.textTheme.titleMedium,
+          ),
+          Divider(
+            color: context.colorScheme.onPrimaryContainer,
+          ),
+          Text(
+            details.description,
+            softWrap: true,
+            style: context.textTheme.bodyMedium,
+          ),
+        ],
       ),
     );
   }
