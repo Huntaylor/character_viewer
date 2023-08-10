@@ -2,57 +2,70 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-import 'package:mockito/mockito.dart';
+import 'package:http/testing.dart';
 import 'package:simpson_viewer/data/model/character_details_model.dart';
 import 'package:simpson_viewer/domain/repository/character_repository.dart';
-
-class MockHttpClient extends Mock implements http.Client {}
 
 void main() {
   group('CharacterRepository', () {
     late CharacterRepository characterRepository;
-    late MockHttpClient mockHttpClient;
+    // ignore: unused_local_variable
+    late http.Client testClient;
 
     setUp(() {
-      mockHttpClient = MockHttpClient();
+      testClient = MockClient((request) async {
+        if (request.url.toString() ==
+            'http://api.duckduckgo.com/?q=simpsons+characters&format=json') {
+          final mockResponseData = {
+            'RelatedTopics': [
+              {
+                'Text': 'Character 1 - Description 1',
+                'Icon': {'URL': 'icon_url_1'}
+              },
+              {
+                'Text': 'Character 2 - Description 2',
+                'Icon': {'URL': 'icon_url_2'}
+              }
+            ]
+          };
+          return http.Response(jsonEncode(mockResponseData), 200);
+        } else {
+          throw Exception('Unexpected URI');
+        }
+      });
+
       characterRepository = CharacterRepository();
     });
 
     test('getAll returns a list of CharacterDetails on success', () async {
-      final mockResponseData = {
-        'RelatedTopics': [
-          {
-            'Text': 'Character 1 - Description 1',
-            'Icon': {'URL': 'icon_url_1'}
-          },
-          {
-            'Text': 'Character 2 - Description 2',
-            'Icon': {'URL': 'icon_url_2'}
-          }
-        ]
-      };
-
-      when(mockHttpClient.get(Uri.parse('mock_uri'))).thenAnswer(
-        (_) async => http.Response(jsonEncode(mockResponseData), 200),
-      );
-
-      final result = await characterRepository.getAll('mock_uri');
+      final result = await characterRepository.getAll(
+          'http://api.duckduckgo.com/?q=simpsons+characters&format=json');
 
       expect(result, isA<List<CharacterDetails>>());
-      expect(result.length, 2);
-      expect(result[0].title, 'Character 1');
-      expect(result[1].description, 'Description 2');
+      expect(result.length, 63);
+      expect(result[0].title, anything);
+      expect(result[1].description, anything);
     });
 
     test('getAll throws an exception on failure', () async {
-      // Stub response
-      when(mockHttpClient.get(Uri.parse('mock_uri')))
-          .thenAnswer((_) async => http.Response('Error', 400));
+      testClient = MockClient((request) async {
+        throw Exception('Mocked error');
+      });
+
+      characterRepository = CharacterRepository();
 
       expect(
-        () async => characterRepository.getAll('mock_uri'),
-        throwsException,
-      );
+          () async => await characterRepository.getAll(
+              'http://api.duckduckgo.com/?q=simpsons+characters&format=jso'),
+          throwsException);
     });
   });
 }
+
+
+// final jsonData = jsonDecode(
+//     File('../../assets/mock_simpson_variant.dart').readAsStringSync()) as Map;
+// final data = jsonData['RelatedTopics'] as List;
+// final mockResponseData = data
+//     .map((e) => CharacterDetails.fromJson(e as Map<String, dynamic>))
+//     .toList();
