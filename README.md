@@ -12,11 +12,10 @@ A Very Good Project created by Very Good CLI.
 
 ## Getting Started 🚀
 
-This project contains 3 flavors:
+This project contains 2 flavors:
 
 - Simpson Variant
 - Wire Variant
-- Production
 
 To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
 
@@ -27,8 +26,6 @@ $ flutter run --flavor simpson_variant --target lib/main_simpson_variant.dart
 # Wire Variant
 $ flutter run --flavor wire_variant --target lib/main_wire_variant.dart
 
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
 ```
 
 _\*Character Viewer works on iOS, Android, Web, and Windows._

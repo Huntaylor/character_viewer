@@ -80,11 +80,6 @@ android {
 
     flavorDimensions "default"
     productFlavors { 
-        production {
-            dimension "default"
-            applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Character Viewer"]
-        }
         wire_variant {
             dimension "default"
             applicationIdSuffix ".dev"
