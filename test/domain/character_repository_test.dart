@@ -61,11 +61,3 @@ void main() {
     });
   });
 }
-
-
-// final jsonData = jsonDecode(
-//     File('../../assets/mock_simpson_variant.dart').readAsStringSync()) as Map;
-// final data = jsonData['RelatedTopics'] as List;
-// final mockResponseData = data
-//     .map((e) => CharacterDetails.fromJson(e as Map<String, dynamic>))
-//     .toList();
