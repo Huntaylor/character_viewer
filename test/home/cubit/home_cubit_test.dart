@@ -9,7 +9,6 @@ import '../../assets/json_reader.dart';
 import '../../domain/repo_mocks.mocks.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   group('HomeCubit', () {
     late HomeCubit homeCubit;
     late MockCharacterRepository mockCharacterRepository;
