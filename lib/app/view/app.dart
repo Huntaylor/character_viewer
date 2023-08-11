@@ -1,5 +1,5 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:simpson_viewer/domain/repository/character_repository.dart';
+import 'package:simpson_viewer/data/repository/character_repository.dart';
 import 'package:simpson_viewer/presentation/pages/home/home.dart';
 import 'package:simpson_viewer/utils/app_library.dart';
 

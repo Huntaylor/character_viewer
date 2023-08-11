@@ -2,7 +2,7 @@ import 'package:searchable_listview/searchable_listview.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:simpson_viewer/presentation/pages/home/home.dart';
 import 'package:simpson_viewer/utils/app_library.dart';
-import 'package:simpson_viewer/utils/widgets/character_card.dart';
+import 'package:simpson_viewer/presentation/widgets/character_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simpson_viewer/data/model/character_details_model.dart';
+import 'package:simpson_viewer/domain/model/character_details_model.dart';
 
 void main() {
   group('CharacterDetails', () {

@@ -3,7 +3,7 @@ import 'package:autoequal/autoequal.dart';
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:equatable/equatable.dart';
 
-import 'package:simpson_viewer/domain/repository/character_repository.dart';
+import 'package:simpson_viewer/data/repository/character_repository.dart';
 import 'package:simpson_viewer/utils/app_library.dart';
 
 part 'home_state.dart';

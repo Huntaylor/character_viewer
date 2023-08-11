@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'package:simpson_viewer/data/model/character_details_model.dart';
-import 'package:simpson_viewer/domain/interface/character_interface.dart';
+import 'package:simpson_viewer/domain/model/character_details_model.dart';
+import 'package:simpson_viewer/data/interface/character_interface.dart';
 
 class CharacterRepository extends ICharacterSource {
   @override
